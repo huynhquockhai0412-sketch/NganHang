@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Be Vietnam Pro', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    overscroll-behavior-y: none;
+  }
+}
+
+/* Custom scrollbar hiding for clean app feel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Tabular nums for financial balances */
+.tabular-numbers {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Smooth leaf sway animation */
+@keyframes floatLeaf {
+  0% {
+    transform: translate(0, -10px) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(80px, 450px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.leaf-fall-1 {
+  animation: floatLeaf 8s ease-in-out infinite;
+}
+.leaf-fall-2 {
+  animation: floatLeaf 11s ease-in-out infinite 2s;
+}
+.leaf-fall-3 {
+  animation: floatLeaf 9.5s ease-in-out infinite 4s;
+}
+.leaf-fall-4 {
+  animation: floatLeaf 13s ease-in-out infinite 6s;
+}

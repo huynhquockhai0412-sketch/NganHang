@@ -1,0 +1,6 @@
+{
+  "name": "Techcombank Mobile",
+  "description": "Ứng dụng ngân hàng số Techcombank với giao diện chuẩn di động, xác thực mã PIN 6 số an toàn và quản lý tài khoản thông minh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
