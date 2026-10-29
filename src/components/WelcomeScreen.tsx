@@ -3,6 +3,7 @@ import { TechcombankLogo } from './TechcombankLogo';
 import { FallingLeaves } from './FallingLeaves';
 import { ArrowLeftRight, QrCode, Gift, Calendar, MapPin, Phone, Headphones, ShieldCheck, ChevronRight, Lock } from 'lucide-react';
 import { UserProfile } from '../types';
+import hanoiAutumnImg from '../assets/images/hanoi_autumn_vendor_1793278984899.jpg';
 
 interface WelcomeScreenProps {
   user: UserProfile;
@@ -44,12 +45,15 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
       {/* ============================================================== */}
       <div className="block md:hidden relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-[#e9b867]">
         {/* Background Autumn Street Artwork */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 bg-[#e9b867]">
           <img
-            src="/src/assets/images/hanoi_autumn_vendor_1793278984899.jpg"
+            src={hanoiAutumnImg}
             alt="Techcombank Autumn Hanoi"
             className="w-full h-full object-cover object-center"
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              e.currentTarget.src = '/images/hanoi_autumn_vendor.jpg';
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#f5dfb8]/90" />
         </div>
@@ -196,12 +200,15 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
         {/* Hero Section */}
         <div className="relative min-h-[540px] w-full overflow-hidden bg-[#e9b867]">
           {/* Background Street Art */}
-          <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 z-0 bg-[#e9b867]">
             <img
-              src="/src/assets/images/hanoi_autumn_vendor_1793278984899.jpg"
+              src={hanoiAutumnImg}
               alt="Techcombank Autumn Hanoi"
               className="w-full h-full object-cover object-center"
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                e.currentTarget.src = '/images/hanoi_autumn_vendor.jpg';
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-[#f5dfb8]/90" />
           </div>

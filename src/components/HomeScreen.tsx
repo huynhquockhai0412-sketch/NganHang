@@ -23,6 +23,8 @@ import {
 } from 'lucide-react';
 import { TechcombankLogo } from './TechcombankLogo';
 import { UserProfile, Transaction, NotificationItem } from '../types';
+import hanoiAutumnImg from '../assets/images/hanoi_autumn_vendor_1793278984899.jpg';
+import piggySavingsImg from '../assets/images/piggy_savings_banner_1793279000289.jpg';
 
 interface HomeScreenProps {
   user: UserProfile;
@@ -90,12 +92,15 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
         {/* Upper Area with Scenic Hanoi Background */}
         <div className="relative w-full overflow-hidden pb-6">
           {/* Background image matching Image 2 */}
-          <div className="absolute inset-0 z-0 h-[480px]">
+          <div className="absolute inset-0 z-0 h-[480px] bg-[#e9b867]">
             <img
-              src="/src/assets/images/hanoi_autumn_vendor_1793278984899.jpg"
+              src={hanoiAutumnImg}
               alt="Techcombank Autumn Hanoi"
               className="w-full h-full object-cover object-top"
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                e.currentTarget.src = '/images/hanoi_autumn_vendor.jpg';
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-[#fbf8f2]" />
           </div>
@@ -337,12 +342,15 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 </div>
               </div>
 
-              <div className="w-28 h-24 shrink-0 relative overflow-hidden rounded-xl">
+              <div className="w-28 h-24 shrink-0 relative overflow-hidden rounded-xl bg-[#faebd0]">
                 <img
-                  src="/src/assets/images/piggy_savings_banner_1793279000289.jpg"
+                  src={piggySavingsImg}
                   alt="Piggy savings"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.src = '/images/piggy_savings_banner.jpg';
+                  }}
                 />
               </div>
             </div>
@@ -564,12 +572,15 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       <div className="hidden md:block w-full max-w-7xl mx-auto px-8 py-8 space-y-8">
         {/* Top Scenic Banner Card */}
         <div className="relative rounded-3xl overflow-hidden shadow-lg border border-neutral-200 bg-[#e9b867] min-h-[220px] flex items-center">
-          <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 z-0 bg-[#e9b867]">
             <img
-              src="/src/assets/images/hanoi_autumn_vendor_1793278984899.jpg"
+              src={hanoiAutumnImg}
               alt="Hanoi Autumn"
               className="w-full h-full object-cover object-[center_35%]"
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                e.currentTarget.src = '/images/hanoi_autumn_vendor.jpg';
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-[#faecd0]/90" />
           </div>
@@ -745,12 +756,15 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 </div>
               </div>
 
-              <div className="w-36 h-28 relative rounded-2xl overflow-hidden shadow-sm shrink-0">
+              <div className="w-36 h-28 relative rounded-2xl overflow-hidden shadow-sm shrink-0 bg-[#faebd0]">
                 <img
-                  src="/src/assets/images/piggy_savings_banner_1793279000289.jpg"
+                  src={piggySavingsImg}
                   alt="Piggy savings"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.src = '/images/piggy_savings_banner.jpg';
+                  }}
                 />
               </div>
             </div>
